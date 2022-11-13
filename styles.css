@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+.panels {
+    display: flex;
+    height: 100vh;
+}
+
+.panel-child {
+    flex: 1;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    transition:
+        flex 0.6s cubic-bezier(0.215, 0.610, 0.355, 1),
+        font-size 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+        background 0.2s;
+
+}
+
+.panel-child>* {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex: 1 0 auto;
+    transition: transform 0.2s;
+    /* border: 2px solid red; */
+}
+
+.panel-child>p {
+    font-family: 'Comfortaa', cursive;
+    font-size: 20px;
+    color: white;
+
+}
+
+.panel-child>*:first-child {
+    transform: translateY(-100%);
+}
+
+.panel-child>*:last-child {
+    transform: translateY(150%);
+}
+
+.panel-active>*:last-child {
+    transform: translateY(0);
+}
+
+.panel-active>*:first-child {
+    transform: translateY(25%);
+
+}
+
+.open-panel>p {
+    font-size: 1.5rem;
+    text-shadow: 0px 2px 1px #EEF1ED;
+    font-weight: 700;
+}
+
+.open-panel {
+    flex: 3;
+
+}
+
+.open-panel>p:nth-child(2) {
+    font-size: 3rem;
+
+}
+
+.panel-child:nth-child(1) {
+    background-image: url(assests/pexels-jess-bailey-designs-913136.jpg);
+}
+
+.panel-child:nth-child(2) {
+    background-image: url(assests/pexels-mark-stebnicki-2893882.jpg);
+}
+
+.panel-child:nth-child(3) {
+    background-image: url(assests/pexels-saveurs-secretes-5807980.jpg);
+}
+
+.panel-child:nth-child(4) {
+    background-image: url(assests/pexels-nixon-johnson-2122951.jpg);
+}
+
+.panel-child:nth-child(5) {
+    background-image: url(assests/pexels-pixabay-277253.jpg);
+}
